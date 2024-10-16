@@ -143,6 +143,9 @@ footer{
     .jump{
         display: none;
     }
+    .background-image{
+        display: none;
+    }
 }
 @media (max-width: 768px) {
     .logo{
