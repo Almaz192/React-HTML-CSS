@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Danfo", serif;
+    font-weight: 400;
+
+}
+body{
+    height: 100vh;
+    background-color: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+input{
+    height: 56px;
+    width: 500px;
+    border-radius: 10px 6px 10px 6px;
+    padding: 6px;
+    border: none;
+    font-size: 25px;
+}
+button{
+    height: 56px;
+    width: 90px;
+    color: #161616;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 25px;
+}
+button:hover{
+    background-color: transparent;
+    transition: ease-in-out 0.2s;
+    border: white 3px solid;
+    border-radius: 6px;
+    color: white;
+
+}
