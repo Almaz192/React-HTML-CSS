@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Validation</title>
+        <link rel="stylesheet" href="./validation.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <h1>Fill your information</h1>
+        <div class="as">
+            <label for="name">Name</label>
+            <input type="text" id="name" />
+            <p>Field is empty.</p>
+        </div>
+        <div class="as">
+            <label for="email">Email</label>
+            <input type="email" id="email" />
+            <p>Field must contain @ and .</p>
+        </div>
+        <div class="as">
+            <label for="password">Password</label>
+            <input type="password" id="password" />
+            <p>At least 8 charachters</p>
+        </div>
+        <button id="btn">Submit</button>
+        <script src="./validation.js"></script>
+    </body>
+</html>
