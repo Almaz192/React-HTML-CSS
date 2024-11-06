@@ -2,9 +2,10 @@ const num1 = document.getElementById("num1");
 const num2 = document.getElementById("num2");
 const res = document.getElementById("result");
 const Btn = document.getElementById("Btn");
+const operationSelect = document.getElementById("operation");
 
-let second = "";
 let first = "";
+let second = "";
 
 num1.addEventListener("input", (e) => {
     first = e.target.value;
@@ -17,10 +18,13 @@ Btn.addEventListener("click", () => {
     const operation = operationSelect.value;
     let result;
 
-    if (isNaN(num1) || isNaN(num2)) {
-        resultDisplay.textContent = "Пожалуйста, введите корректные числа.";
+    if (isNaN(first) || isNaN(second) || first === "" || second === "") {
+        res.textContent = "Пожалуйста, введите корректные числа.";
         return;
     }
+
+    const num1 = parseFloat(first);
+    const num2 = parseFloat(second);
 
     switch (operation) {
         case "add":
@@ -34,15 +38,15 @@ Btn.addEventListener("click", () => {
             break;
         case "divide":
             if (num2 === 0) {
-                resultDisplay.textContent = "Деление на ноль невозможно.";
+                res.textContent = "Деление на ноль невозможно.";
                 return;
             }
             result = num1 / num2;
             break;
         default:
-            resultDisplay.textContent = "Пожалуйста, выберите операцию.";
+            res.textContent = "Пожалуйста, выберите операцию.";
             return;
     }
 
-    alert(result);
+    res.textContent = result;
 });
